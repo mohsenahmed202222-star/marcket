@@ -1,0 +1,111 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.info {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.record-form {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.goods {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.good {
+  flex: 1;
+}
+
+.good.oil {
+  background-color: #e3f2fd; /* light blue */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.good.sugar {
+  background-color: #fff3e0; /* light orange */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.good.pasta {
+  background-color: #f3e5f5; /* light purple */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.add-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.records-table th,
+.records-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.records-table th {
+  background-color: #f2f2f2;
+}
+
+.oil {
+  background-color: #e3f2fd;
+}
+
+.sugar {
+  background-color: #fff3e0;
+}
+
+.pasta {
+  background-color: #f3e5f5;
+}
+
+.back-btn {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}

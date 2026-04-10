@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>قائمة العائلات</h1>
+  <div class="top-row">
+    <button (click)="addFamily()" class="add-btn">إضافة عائلة جديدة</button>
+    <div class="filters-row">
+      <input
+        type="search"
+        placeholder="ابحث بالاسم..."
+        [(ngModel)]="search"
+        class="search-input"
+      />
+      <select [(ngModel)]="cardFilter" class="card-filter">
+        <option value="">كل البطاقات</option>
+        <option [value]="100">100</option>
+        <option [value]="150">150</option>
+        <option [value]="200">200</option>
+      </select>
+    </div>
+  </div>
+  <div class="family-list" *ngIf="filteredFamilies.length > 0">
+    <div
+      *ngFor="let family of filteredFamilies"
+      class="family-card"
+      [style.border-color]="getCardColor(family.cardType)"
+    >
+      <h3>{{ family.name }}</h3>
+      <p>نوع البطاقة: {{ family.cardType }}</p>
+      <p>عدد الأفراد: {{ family.individuals }}</p>
+      <div class="actions">
+        <button (click)="viewFamily(family.id)" class="view-btn">عرض التفاصيل</button>
+        <button (click)="deleteFamily(family.id)" class="delete-btn">حذف</button>
+      </div>
+    </div>
+  </div>
+  <p *ngIf="filteredFamilies.length === 0" class="empty-state">
+    لا توجد عائلات مطابقة لبحثك.
+  </p>
+</div>
